@@ -57,9 +57,7 @@ function myComponent(){
 
 
 
- Is this needed?
- - so far marked() doesn't work in console
- -
+
 ### Challenges and Questions
 - What is parsing? : _analyze (a string or text) into logical syntactic components, typically in order to test conformability to a logical grammar._
 - MDN Definition: _The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned._
