@@ -45,16 +45,22 @@ function myComponent(){
 - [X] Research and try out dangerouslySetInnerHTML
 - [X] dangerouslySetInnerHTML is used with Marked JS Library
 ---
-- [ ] Set up CSS
+- [X] Set up CSS
+- [X] Set up Text Area
+- [X] Set up MD Preview Area
 ---
-- [ ]
-
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-
+- [X] Set up Chai
+---
+- [ ] User Text Area
+  - [ ] Must see a live preview on same page
+  - [ ] When text is typed, show in live component
+- [ ] Submit button to save note on server
+  - [ ] Note must be longer than 50 characters
+- [ ] Confirmation Page when note saved successfully
+- [ ] Text Area should empty after it's sent
+- [ ] React Router
+  - [ ] Confirmation Page
+  - [ ] Home Page
 
 
 
