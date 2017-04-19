@@ -7,26 +7,23 @@ import TextArea from "./text_area.js";
 import Confirm from "./confirm.js";
 import Markdown from "./markdown_preview.js";
 
-var foo = marked("I am using __markdown__");
-
-function createMarkup() {
-  return { __html: foo };
-}
-
-function TestComponent() {
-  return <div dangerouslySetInnerHTML={createMarkup()} />;
-}
-
 class AppRoot extends React.Component {
   constructor(props) {
     super(props);
+    this.retrieveNote = this.retrieveNote.bind(this);
+  }
+
+  retrieveNote(e) {
+    var textAreaNote = e.target.value;
+    console.log(textAreaNote);
+    this.props.dispatch({ type: "SENT_TEXT", text: marked(textAreaNote) });
   }
 
   render() {
     return (
       <main>
-        <TextArea />
-        <Markdown />
+        <TextArea onChange={this.retrieveNote} />
+        <Markdown note={this.props.text} />
       </main>
     );
   }

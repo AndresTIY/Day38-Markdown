@@ -51,14 +51,14 @@ function myComponent(){
 ---
 - [X] Set up Chai
 ---
-- [ ] User Text Area
-  - [ ] Grab text when it's typed in
-    - [ ] Send it to  store
-    - [ ] Set up reducer
-    - [ ] convert it to markdown display
-    - [ ] Show this in Preview component
-  - [ ] Must see a live preview on same page
-  - [ ] When text is typed, show in live component
+- [X] User Text Area
+  - [X] Grab text when it's typed in
+    - [X] Send it to  store
+    - [X] Set up reducer
+    - [X] convert it to markdown display
+    - [X] Show this in Preview component
+  - [X] Must see a live preview on same page
+  - [X] When text is typed, show in live component
 - [ ] Submit button to save note on server
   - [ ] Note must be longer than 50 characters
 - [ ] Confirmation Page when note saved successfully
@@ -66,12 +66,12 @@ function myComponent(){
 - [ ] React Router
   - [ ] Confirmation Page
   - [ ] Home Page
+- [ ] Reorganize
 
 
 
 ### Challenges and Questions
-- What is parsing? : _analyze (a string or text) into logical syntactic components, typically in order to test conformability to a logical grammar._
-- MDN Definition: _The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned._
+
 
 
 onchange event in main file
