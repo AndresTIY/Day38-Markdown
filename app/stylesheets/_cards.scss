@@ -28,9 +28,12 @@
     width: 23rem;
     border: 1px solid $color-blackblue;
     margin: .5rem auto;
+    font-size: .5rem;
+    height: 25rem;
+
     p {
       // margin: .5rem;
-      // text-align: left;
+      text-align: left;
     }
   }
 }

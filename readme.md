@@ -52,6 +52,11 @@ function myComponent(){
 - [X] Set up Chai
 ---
 - [ ] User Text Area
+  - [ ] Grab text when it's typed in
+    - [ ] Send it to  store
+    - [ ] Set up reducer
+    - [ ] convert it to markdown display
+    - [ ] Show this in Preview component
   - [ ] Must see a live preview on same page
   - [ ] When text is typed, show in live component
 - [ ] Submit button to save note on server
@@ -67,4 +72,13 @@ function myComponent(){
 ### Challenges and Questions
 - What is parsing? : _analyze (a string or text) into logical syntactic components, typically in order to test conformability to a logical grammar._
 - MDN Definition: _The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned._
--
+
+
+onchange event in main file
+dispatching in main
+input is separate
+output should be pure => disconnected from store
+container = main
+main is connected
+withint main, pass this.props.text i, text=This.props.text
+props goes down to children
