@@ -1,10 +1,4 @@
 import React from "react";
-import Markdown from "./markdown_preview.js";
-import { connect } from "react-redux";
-import container from "../containers/all.js";
-import allState from "../containers/all.js";
-import store from "../store.js";
-import marked from "marked";
 
 class TextArea extends React.Component {
   constructor(props) {
@@ -21,10 +15,9 @@ class TextArea extends React.Component {
           rows="30"
           cols="50"
         />
-        <button>Save Your Note!</button>
       </div>
     );
   }
 }
 
-export default connect(container.allState)(TextArea);
+export default TextArea;

@@ -1,13 +1,11 @@
 import React from "react";
-import TextArea from "./text_area.js";
-import { connect } from "react-redux";
-import container from "../containers/all.js";
-import allState from "../containers/all.js";
-import store from "../store.js";
 
 class Markdown extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   createMarkup() {
-    return { __html: this.props.text };
+    return { __html: this.props.note };
   }
   render() {
     return (
@@ -21,4 +19,4 @@ class Markdown extends React.Component {
   }
 }
 
-export default connect(container.allState)(Markdown);
+export default Markdown;

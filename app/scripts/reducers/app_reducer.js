@@ -12,6 +12,11 @@ export default function AppReducer(state, action) {
         text: action.text
       });
 
+    case "SAVE_NOTE":
+      //empty text area after saving to server
+      console.log("state.text = ", state.text);
+      return state;
+
     default:
       console.debug("Unhandled State");
   } //end of switch

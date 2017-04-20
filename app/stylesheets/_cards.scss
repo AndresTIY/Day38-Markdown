@@ -4,6 +4,30 @@
   text-align: center;
   float: left;
   margin: 1rem;
+}
+
+
+.md-preview-card {
+  border: 1px solid $color-blackblue;
+  width: 25rem;
+  text-align: center;
+  float: right;
+  margin: 1rem;
+
+  .md-preview {
+    background: white;
+    width: 23rem;
+    border: 1px solid $color-blackblue;
+    margin: .5rem auto;
+    font-size: .5rem;
+    height: 25rem;
+  }
+    p {
+      text-align: left;
+    }
+}
+
+.btn-action {
   button {
     display: block;
     margin: 1rem auto;
@@ -15,28 +39,4 @@
     background: $color-blackblue;
     border-style: none;
   }
-}
-
-.md-preview-card {
-  border: 1px solid $color-blackblue;
-  width: 25rem;
-  text-align: center;
-  float: right;
-  margin: 1rem;
-  .md-preview {
-    background: white;
-    width: 23rem;
-    border: 1px solid $color-blackblue;
-    margin: .5rem auto;
-    font-size: .5rem;
-    height: 25rem;
-
-    p {
-      // margin: .5rem;
-      text-align: left;
-    }
-  }
-}
-main {
-  // text-align: center;
 }

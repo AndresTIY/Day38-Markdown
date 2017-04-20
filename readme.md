@@ -66,19 +66,8 @@ function myComponent(){
 - [ ] React Router
   - [ ] Confirmation Page
   - [ ] Home Page
-- [ ] Reorganize
+- [X] Reorganize
 
 
 
 ### Challenges and Questions
-
-
-
-onchange event in main file
-dispatching in main
-input is separate
-output should be pure => disconnected from store
-container = main
-main is connected
-withint main, pass this.props.text i, text=This.props.text
-props goes down to children
