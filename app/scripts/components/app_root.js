@@ -7,6 +7,7 @@ import TextArea from "./text_area.js";
 import Confirm from "./confirm.js";
 import Markdown from "./markdown_preview.js";
 import Button from "./button.js";
+import clearText from "../actions/clearText.js";
 
 class AppRoot extends React.Component {
   constructor(props) {
@@ -17,26 +18,32 @@ class AppRoot extends React.Component {
   }
   clearTextArea() {
     if (this.props.isSent) {
-      this.props.dispatch({ type: "CLEAR", test: this.props.text });
+      this.props.dispatch(clearText(this.props.text));
     }
   }
   //clearTextArea does nothing so far
 
   retrieveNote(e) {
     var textAreaNote = e.target.value;
-    this.props.dispatch({ type: "SENT_TEXT", text: marked(textAreaNote) });
+    this.props.dispatch({ type: "SENT_TEXT", text: textAreaNote });
   }
   saveNote() {
     if (this.props.text.length < 50) {
       alert("note must be at least 50 characters");
-    } else this.props.dispatch({ type: "SAVE_NOTE" });
+    } else {
+      this.props.dispatch({ type: "SAVE_NOTE" });
+    }
   }
 
   render() {
     return (
       <main>
-        <TextArea clearVal={this.clearTextArea} onChange={this.retrieveNote} />
-        <Markdown note={this.props.text} />
+        <TextArea
+          ref="textarea"
+          textvalue={this.props.text}
+          onChange={this.retrieveNote}
+        />
+        <Markdown note={marked(this.props.text)} />
         <Button onChange={this.saveNote} />
       </main>
     );

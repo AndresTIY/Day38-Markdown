@@ -37,10 +37,9 @@ export default function AppReducer(state, action) {
         })
       }).then((data, success) => {
         alert("your note has been saved!");
+        store.dispatch({ type: "CLEAR" });
       });
-      return Object.assign({}, state, {
-        isSent: true
-      });
+      return state;
 
     case "CLEAR":
       return Object.assign({}, state, {
