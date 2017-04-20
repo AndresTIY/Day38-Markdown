@@ -17,7 +17,6 @@ export default function saveNote(text) {
         note: text
       })
     }).then((data, success) => {
-      alert("your note has been saved!");
       dispatch({ type: "CLEAR" });
     });
   };

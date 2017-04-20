@@ -5,7 +5,8 @@ export default function AppReducer(state, action) {
   if (state === undefined) {
     return {
       isSent: false,
-      text: ""
+      text: "",
+      confirmationMsg: ""
     };
   }
 
@@ -20,7 +21,13 @@ export default function AppReducer(state, action) {
 
     case "CLEAR":
       return Object.assign({}, state, {
-        text: ""
+        text: "",
+        confirmationMsg: "Your note's been saved"
+      });
+
+    case "CLEAR_CONFIRM":
+      return Object.assign({}, state, {
+        confirmationMsg: ""
       });
 
     default:

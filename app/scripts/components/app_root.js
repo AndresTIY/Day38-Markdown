@@ -31,6 +31,9 @@ class AppRoot extends React.Component {
   render() {
     return (
       <main>
+        <h2 onClick={() => this.props.dispatch({ type: "CLEAR_CONFIRM" })}>
+          {this.props.confirmationMsg}
+        </h2>
         <TextArea
           ref="textarea"
           textvalue={this.props.text}
