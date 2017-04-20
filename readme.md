@@ -59,8 +59,8 @@ function myComponent(){
     - [X] Show this in Preview component
   - [X] Must see a live preview on same page
   - [X] When text is typed, show in live component
-- [ ] Submit button to save note on server
-  - [ ] Note must be longer than 50 characters
+- [X] Submit button to save note on server
+  - [X] Note must be longer than 50 characters
 - [ ] Confirmation Page when note saved successfully
 - [ ] Text Area should empty after it's sent
 - [ ] React Router
@@ -71,3 +71,7 @@ function myComponent(){
 
 
 ### Challenges and Questions
+- Not sure when to use React Router
+- Could not get the text area to clear after the message is sent
+- Using Alert function instead of confirmation page when message has been sent
+- Getting a (413, Entity Too Large) error when characters exceed a non specified limit

@@ -23,18 +23,3 @@ export default function app() {
     document.getElementById("app")
   );
 }
-// export default function app() {
-//   render(
-//     <Provider store={store}>
-//       <Router>
-//         <div>
-//           <Route path="/"      component={AppRoot}/>
-//           <Route path="/foobar"  component={FooBar} />
-//           <Route exact path="/about" component={About} />
-//           <Route path="/contact-us" component={Contact} />
-//         </div>
-//       </Router>
-//     </Provider>,
-//     document.getElementById('app')
-//   )
-// }

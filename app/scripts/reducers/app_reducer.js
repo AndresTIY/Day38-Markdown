@@ -8,7 +8,10 @@ const restKey = "30D82F23-700A-52A1-FF7B-1BC275C5F700";
 
 export default function AppReducer(state, action) {
   if (state === undefined) {
-    return {};
+    return {
+      isSent: false,
+      text: ""
+    };
   }
 
   switch (action.type) {
@@ -30,13 +33,18 @@ export default function AppReducer(state, action) {
           "application-type": "REST"
         },
         data: JSON.stringify({
-          note: marked(state.text)
+          note: state.text
         })
       }).then((data, success) => {
-        console.log("note saved = ", data, success);
+        alert("your note has been saved!");
       });
       return Object.assign({}, state, {
         isSent: true
+      });
+
+    case "CLEAR":
+      return Object.assign({}, state, {
+        text: ""
       });
 
     default:

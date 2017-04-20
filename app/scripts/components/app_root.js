@@ -13,21 +13,29 @@ class AppRoot extends React.Component {
     super(props);
     this.retrieveNote = this.retrieveNote.bind(this);
     this.saveNote = this.saveNote.bind(this);
+    this.clearTextArea = this.clearTextArea.bind(this);
   }
+  clearTextArea() {
+    if (this.props.isSent) {
+      this.props.dispatch({ type: "CLEAR", test: this.props.text });
+    }
+  }
+  //clearTextArea does nothing so far
 
   retrieveNote(e) {
     var textAreaNote = e.target.value;
     this.props.dispatch({ type: "SENT_TEXT", text: marked(textAreaNote) });
   }
-  saveNote(e) {
-    this.props.dispatch({ type: "SAVE_NOTE" });
-    console.log("ya");
+  saveNote() {
+    if (this.props.text.length < 50) {
+      alert("note must be at least 50 characters");
+    } else this.props.dispatch({ type: "SAVE_NOTE" });
   }
 
   render() {
     return (
       <main>
-        <TextArea onChange={this.retrieveNote} />
+        <TextArea clearVal={this.clearTextArea} onChange={this.retrieveNote} />
         <Markdown note={this.props.text} />
         <Button onChange={this.saveNote} />
       </main>
