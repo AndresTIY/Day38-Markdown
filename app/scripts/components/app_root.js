@@ -7,21 +7,14 @@ import TextArea from "./text_area.js";
 import Confirm from "./confirm.js";
 import Markdown from "./markdown_preview.js";
 import Button from "./button.js";
-import clearText from "../actions/clearText.js";
+import saveNote from "../actions/save_note.js";
 
 class AppRoot extends React.Component {
   constructor(props) {
     super(props);
     this.retrieveNote = this.retrieveNote.bind(this);
     this.saveNote = this.saveNote.bind(this);
-    this.clearTextArea = this.clearTextArea.bind(this);
   }
-  clearTextArea() {
-    if (this.props.isSent) {
-      this.props.dispatch(clearText(this.props.text));
-    }
-  }
-  //clearTextArea does nothing so far
 
   retrieveNote(e) {
     var textAreaNote = e.target.value;
@@ -31,7 +24,7 @@ class AppRoot extends React.Component {
     if (this.props.text.length < 50) {
       alert("note must be at least 50 characters");
     } else {
-      this.props.dispatch({ type: "SAVE_NOTE" });
+      this.props.dispatch(saveNote(this.props.text));
     }
   }
 

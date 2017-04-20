@@ -1,6 +1,5 @@
 import store from "../store.js";
 import { createStore } from "redux";
-import marked from "marked";
 
 const url = "https://api.backendless.com/v1/data/md_note";
 const appId = "892747C4-CCC9-E96F-FF91-006B50E61400";
@@ -21,24 +20,6 @@ export default function AppReducer(state, action) {
       });
 
     case "SAVE_NOTE":
-      //empty text area after saving to server
-      console.log("state.text = ", state.text);
-      $.ajax({
-        url: url,
-        type: "POST",
-        headers: {
-          "application-id": appId,
-          "secret-key": restKey,
-          "Content-Type": "application/json",
-          "application-type": "REST"
-        },
-        data: JSON.stringify({
-          note: state.text
-        })
-      }).then((data, success) => {
-        alert("your note has been saved!");
-        store.dispatch({ type: "CLEAR" });
-      });
       return state;
 
     case "CLEAR":

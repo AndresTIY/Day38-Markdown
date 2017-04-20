@@ -62,7 +62,7 @@ function myComponent(){
 - [X] Submit button to save note on server
   - [X] Note must be longer than 50 characters
 - [ ] Confirmation Page when note saved successfully
-- [ ] Text Area should empty after it's sent
+- [X] Text Area should empty after it's sent
 - [ ] React Router
   - [ ] Confirmation Page
   - [ ] Home Page
